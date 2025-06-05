@@ -1,36 +1,3 @@
-# Siren
-
-**A Serverless V2Ray Tunnel Optimized for Indonesia**
-
-Siren is a lightweight and serverless V2Ray tunnel built on [Cloudflare Workers](https://workers.cloudflare.com/), supporting modern proxy protocols.  
-It offers fast, secure, and scalable deployment without the need for a traditional VPS.
-
----
-
-## 🔧 Features
-
-- ✅ **Multi-Protocol Support**
-
-  - VMess
-  - Trojan
-  - VLESS
-  - Shadowsocks
-
-- ✅ **Domain over HTTPS (DoH)**  
-  Encrypts DNS queries for improved privacy and security.
-
----
-
-## 🌐 Endpoints
-
-| Endpoint | Description                       |
-| -------- | --------------------------------- |
-| `/`      | Main landing page                 |
-| `/link`  | Generate shareable proxy links    |
-| `/sub`   | Subscription endpoint for clients |
-
----
-
 ## 🚀 Deployment Guide
 
 Siren can be deployed seamlessly using GitHub Actions with Cloudflare Workers.
@@ -74,3 +41,5 @@ Siren can be deployed seamlessly using GitHub Actions with Cloudflare Workers.
 
 7. **Access Your Siren Instance**
    - Visit: `https://<YOUR-WORKERS-SUBDOMAIN>.workers.dev`
+
+8. **U must edit**
