@@ -1,0 +1,36 @@
+name = "afrcloud-siren"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-05-23"
+minify = true
+workers_dev = true
+
+
+routes = [
+
+  { pattern = "stbwrt.web.id", custom_domain = true },
+  { pattern = "ava.game.naver.com.stbwrt.web.id", custom_domain = true },
+  { pattern = "quiz.int.vidio.com.stbwrt.web.id", custom_domain = true },
+  { pattern = "graph.instagram.com.stbwrt.web.id", custom_domain = true },
+  { pattern = "help.viu.com.stbwrt.web.id", custom_domain = true },
+  { pattern = "support.zoom.us.stbwrt.web.id", custom_domain = true },
+  { pattern = "cache.netflix.com.stbwrt.web.id", custom_domain = true },
+  { pattern = "graph.facebook.com.stbwrt.web.id", custom_domain = true },
+  { pattern = "dogseechew.com.stbwrt.web.id", custom_domain = true },
+]
+
+[[kv_namespaces]]
+binding = "SIREN"
+id = "1e18363cb4474b0abaa0c7e4a8bea159"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install -q worker-build && worker-build --dev" }
+
+[vars]
+UUID = "bbbbbbbb-cccc-4ddd-eeee-ffffffffffff"
+MAIN_PAGE_URL = "https://raw.githubusercontent.com/AFRcloud/AFR-Cloud/refs/heads/master/web/index.html"
+SUB_PAGE_URL = "https://raw.githubusercontent.com/AFRcloud/AFR-Cloud/refs/heads/master/web/sub.html"
+LINK_PAGE_URL = "https://raw.githubusercontent.com/AFRcloud/AFR-Cloud/refs/heads/master/web/link.html"
+CONVERTER_PAGE_URL = "https://raw.githubusercontent.com/AFRcloud/AFR-Cloud/refs/heads/master/web/converter.html"
